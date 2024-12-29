@@ -38,3 +38,35 @@ Este script en Python permite automatizar la exportación y creación de respald
 2. Ejecuta el script desde la terminal:
    ```bash
    python backup.py
+3. Proporciona las credenciales solicitadas.  
+4. Revisa la carpeta `~/Downloads` para los respaldos descargados.
+
+## Formato de los Archivos en `Lists`
+
+Cada archivo debe contener las direcciones IP y puertos en el siguiente formato:
+
+```plaintext
+192.168.1.1:22  
+192.168.1.2:2222  
+# Comentarios comienzan con #
+```
+## Ejemplo de Salida
+
+Al ejecutar el script, verás mensajes como los siguientes:
+
+```plaintext
+Procesando archivo de lista: dispositivos.txt  
+Conectando a 192.168.1.1:22...  
+Identidad del sistema: Router1  
+Export y backup creados con el nombre: MK-Router1-2024-12-29  
+Descargando /MK-Router1-2024-12-29.backup a ~/Downloads/dispositivos/MK-Router1-2024-12-29.backup...  
+Archivos remotos eliminados.
+```
+## Notas
+
+- El script maneja conexiones fallidas, mostrando los errores al final.
+- Si no existe la carpeta `Lists`, el script finalizará con un mensaje de error.
+
+## Contribuciones
+
+¡Tu retroalimentación y contribuciones son bienvenidas! Si tienes ideas para mejorar el script, abre un issue o envía un pull request.
